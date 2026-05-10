@@ -8,10 +8,15 @@ async function getPrices() {
     const ethChange = data.ethereum.usd_24h_change.toFixed(2);
 
     document.getElementById("btc").innerHTML =
-        "$" + data.bitcoin.usd + " (" + btcChange + "%)";
+        "$" + data.bitcoin.usd + " (" + formatChange(btcChange) + ")";
 
     document.getElementById("eth").innerHTML =
-        "$" + data.ethereum.usd + " (" + ethChange + "%)";
+        "$" + data.ethereum.usd + " (" + formatChange(ethChange) + ")";
+}
+function formatChange(change) {
+    return change > 0
+        ? `<span style="color:green">+${change}%</span>`
+        : `<span style="color:red">${change}%</span>`;
 }
 
 // запускаем функцию сразу
