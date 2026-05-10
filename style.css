@@ -18,3 +18,21 @@ p {
     padding: 10px;
     border-radius: 10px;
 }
+.card {
+    background-color: #161b22;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 15px;
+    border: 1px solid #30363d;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.card h3 {
+    margin: 0;
+    color: #58a6ff;
+}
+
+.card p {
+    font-size: 20px;
+    margin-top: 10px;
+}
