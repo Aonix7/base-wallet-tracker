@@ -22,3 +22,22 @@ function formatChange(change) {
 // запускаем функцию сразу
 getPrices();
 setInterval(getPrices, 10000);
+function loadActivity() {
+    const feed = document.getElementById("activityFeed");
+
+    const fakeTxs = [
+        "Sent 0.2 ETH",
+        "Received 150 USDC",
+        "Swap ETH → USDT",
+        "Paid gas fee 0.003 ETH",
+        "Received NFT (Base)"
+    ];
+
+    feed.innerHTML = "";
+
+    fakeTxs.forEach(tx => {
+        const item = document.createElement("p");
+        item.innerText = "• " + tx;
+        feed.appendChild(item);
+    });
+}
