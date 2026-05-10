@@ -4,10 +4,11 @@
     <title>Base Wallet Tracker</title>
     <link rel="stylesheet" href="style.css">
 </head>
-    <script src="script.js"></script>
+
 <body>
 
     <h1>Base Wallet Tracker</h1>
+
     <button onclick="getPrices()">Refresh Prices</button>
 
     <h2>BTC Price</h2>
@@ -16,11 +17,17 @@
     <h2>ETH Price</h2>
     <p id="eth">loading...</p>
 
-    <h2>Wallet</h2>
-    <p>0x1234...abcd</p>
+    <hr>
 
-    <h2>Network</h2>
-    <p>Base</p>
+    <h2>Wallet Tracker</h2>
+
+    <input id="walletInput" placeholder="Enter wallet address" />
+
+    <button onclick="setWallet()">Track Wallet</button>
+
+    <p id="walletDisplay">No wallet selected</p>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
