@@ -22,6 +22,7 @@ function formatChange(change) {
 // запускаем функцию сразу
 getPrices();
 setInterval(getPrices, 10000);
+loadActivity();
 function loadActivity() {
     const feed = document.getElementById("activityFeed");
 
