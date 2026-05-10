@@ -10,3 +10,4 @@ async function getPrices() {
 
 // запускаем функцию сразу
 getPrices();
+setInterval(getPrices, 10000);
