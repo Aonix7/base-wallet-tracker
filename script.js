@@ -27,18 +27,35 @@ function loadActivity() {
     const feed = document.getElementById("activityFeed");
 
     const fakeTxs = [
-        "Sent 0.2 ETH",
-        "Received 150 USDC",
-        "Swap ETH → USDT",
-        "Paid gas fee 0.003 ETH",
-        "Received NFT (Base)"
+        { type: "send", text: "Sent 0.2 ETH" },
+        { type: "receive", text: "Received 150 USDC" },
+        { type: "swap", text: "Swap ETH → USDT" },
+        { type: "gas", text: "Paid gas fee 0.003 ETH" },
+        { type: "receive", text: "Received NFT (Base)" }
     ];
 
     feed.innerHTML = "";
 
     fakeTxs.forEach(tx => {
-        const item = document.createElement("p");
-        item.innerText = "• " + tx;
+        const item = document.createElement("div");
+        item.className = "tx";
+
+        const icon = document.createElement("div");
+        icon.className = "icon";
+
+        const text = document.createElement("div");
+        text.className = "tx-text";
+
+        text.innerText = tx.text;
+
+        // ИКОНКИ ПО ТИПУ
+        if (tx.type === "send") icon.innerText = "📤";
+        if (tx.type === "receive") icon.innerText = "📥";
+        if (tx.type === "swap") icon.innerText = "🔄";
+        if (tx.type === "gas") icon.innerText = "⛽";
+
+        item.appendChild(icon);
+        item.appendChild(text);
         feed.appendChild(item);
     });
 }
