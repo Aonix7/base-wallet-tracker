@@ -59,3 +59,38 @@ p {
 .tx-text {
     font-size: 14px;
 }
+.dashboard {
+    max-width: 900px;
+    margin: auto;
+}
+
+.market-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #161b22;
+    color: white;
+}
+
+button {
+    background-color: #238636;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
