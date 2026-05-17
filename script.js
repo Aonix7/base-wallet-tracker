@@ -59,3 +59,36 @@ function loadActivity() {
         feed.appendChild(item);
     });
 }
+function addLiveTransaction() {
+
+    const feed = document.getElementById("activityFeed");
+
+    const liveTxs = [
+        "Whale bought 12 BTC",
+        "New Base wallet connected",
+        "Swap USDC → ETH",
+        "Bridge to Base completed",
+        "Large ETH transfer detected",
+        "Minted NFT on Base",
+        "Sent 4.2 ETH",
+        "Received 1200 USDC"
+    ];
+
+    const randomTx =
+        liveTxs[Math.floor(Math.random() * liveTxs.length)];
+
+    const item = document.createElement("div");
+
+    item.className = "tx";
+
+    item.innerHTML =
+        `<div class="icon">⚡</div>
+         <div class="tx-text">${randomTx}</div>`;
+
+    feed.prepend(item);
+
+    // оставляем только последние 6 событий
+    if (feed.children.length > 6) {
+        feed.removeChild(feed.lastChild);
+    }
+}
