@@ -109,3 +109,27 @@ button:hover {
         transform: translateY(0);
     }
 }
+#chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.bar {
+    width: 30px;
+    background: linear-gradient(to top, #238636, #58a6ff);
+    border-radius: 8px 8px 0 0;
+    animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        opacity: 0.7;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
