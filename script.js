@@ -93,3 +93,15 @@ function addLiveTransaction() {
         feed.removeChild(feed.lastChild);
     }
 }
+function animateChart() {
+
+    const bars = document.querySelectorAll(".bar");
+
+    bars.forEach(bar => {
+
+        const randomHeight =
+            Math.floor(Math.random() * 80) + 20;
+
+        bar.style.height = randomHeight + "px";
+    });
+}
