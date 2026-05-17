@@ -106,3 +106,35 @@ function animateChart() {
         bar.style.height = randomHeight + "px";
     });
 }
+function addWhaleAlert() {
+
+    const whaleFeed =
+        document.getElementById("whaleFeed");
+
+    const alerts = [
+        "Whale moved 450 BTC",
+        "Large ETH transaction detected",
+        "2M USDC bridged to Base",
+        "New whale wallet connected",
+        "Massive swap ETH → USDC",
+        "Large NFT purchase on Base",
+        "Whale accumulated 1200 ETH"
+    ];
+
+    const randomAlert =
+        alerts[Math.floor(Math.random() * alerts.length)];
+
+    const item = document.createElement("div");
+
+    item.className = "tx";
+
+    item.innerHTML =
+        `<div class="icon">🐋</div>
+         <div class="tx-text">${randomAlert}</div>`;
+
+    whaleFeed.prepend(item);
+
+    if (whaleFeed.children.length > 5) {
+        whaleFeed.removeChild(whaleFeed.lastChild);
+    }
+}
