@@ -23,6 +23,7 @@ function formatChange(change) {
 getPrices();
 setInterval(getPrices, 10000);
 loadActivity();
+setInterval(addLiveTransaction, 5000);
 function loadActivity() {
     const feed = document.getElementById("activityFeed");
 
