@@ -25,6 +25,7 @@ setInterval(getPrices, 10000);
 loadActivity();
 setInterval(addLiveTransaction, 5000);
 setInterval(animateChart, 3000);
+setInterval(addWhaleAlert, 7000);
 function loadActivity() {
     const feed = document.getElementById("activityFeed");
 
